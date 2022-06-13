@@ -5,13 +5,12 @@ import Modal from "./stories/Modal";
 
 
 function App() {
-    //  const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false)
 
-    //<Modal isOpen={open} handleClose={() => setOpen(false)} />
     return (
         <>
             <button onClick={() => setOpen(true)}>Open</button>
-
+            <Modal isOpen={open} handleClose={() => setOpen(false)} customButtonShow={false} />
         </>
     )
 }

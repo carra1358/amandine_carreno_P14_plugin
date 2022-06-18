@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Modal_Plugin
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Cursus OpenClassrooms: Project 14
 
-## Available Scripts
+This plugin is a part of the project 14 HrNet.
+You will me able to create easily a customizable Modal component.
 
-In the project directory, you can run:
+# Modal_Plugin
 
-### `npm start`
+## Cursus OpenClassrooms: Project 14
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This plugin is a part of the project 14 HrNet.
+You will me able to create easily a customizable Modal component.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##  Installation
+```
+ npm i amandine_carreno_p14_modal_plugin 
+```
 
-### `npm test`
+##  Usage
+This is  an example for a simple usage of the Modal component. 
+To show the Modal you have do use the propertie "isOpen" and set it to true and
+to remove the Modal you have to pass a callback to set "isOpen" at false. You can Embeded the node element of your choice as modal's content.
+```
+import { Modal } from "amandine_carreno_p14_modal_lib"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+function App() {
+    // constent that handles the state of the modal
+    const [open, setOpen] = useState(false)
+ return (
+        <> 
+            <button onClick={() => setOpen(true)}>Open</button>
+            
+            <Modal isOpen={open} 
+            handleClose={() => setOpen(false)}
+            customButtonShow={false}>            
+            <p>Your Message</p>
+            </Modal>
+        </>
+    )
+}
+```
+## Properties
+|Name      | Type   | Default.   |Description                                                                 | 
+|----------|-------  |----------|--------------------------------|
+|isOpen| bool| true | Display of the modal|
+|defaultButtonShow| bool| true | Display default button which only supports function to close the modal|
+|customButtonShow| bool| true | display customizable button|
+|handleClose| func| -- | Function that handles closing events on under layer, cross icon and default closing button|
+|handleCustomClick| func| -- | Function that handles event on custom button can be used as submit, cancel, etc..|
+|children|node| --| Modal main content|
+|title|string|-- | Modal Modal header text content|
+|defaultButtonLabel|string| "Close"| default button text label|
+|customButtonLabel|string| "OK"| custom button text label|
+|size|["L", "M", "S"]| --| Apply class to change dialog window's width|
+| underlayerColor | string | "rgba(83, 157, 131, 0.6)" | Modal uderlayer color|
+|underlayerWidth|string|"100%" | Width of under layer|
+|underlayerHeight|string|"100%" | Height of under layer|
+|dialogBackgroundColor|string|"#FFFF" | Modal dialog color|
+|iconColor|string| "rgba(83, 157, 131, 0.6)"| Modal cross icon color|
+|customButtonBackgroundColor|string| --| Customizable button background color|
+|customButtonColor|string| --| Customizable button text color|
+|customButtonMargin|string| --| Customizable button margin|
+|customButtonType|string| "button"| Customizable button type if "submit" propertie formId is needed |
+|formId|string| -- | Required to link form in modal content and customizable button|
 
-### `npm run build`
+## Notes
+this package use React and StoryBook.
+link to my project : https://github.com/carra1358/amandine_carreno_p14_02_05_2022
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Author
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Amandine Carreno

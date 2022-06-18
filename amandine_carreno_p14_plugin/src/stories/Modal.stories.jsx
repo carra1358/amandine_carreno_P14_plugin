@@ -1,7 +1,5 @@
 import React from 'react';
-import { Modal } from "./Modal"
-//import { screen, userEvent } from '@storybook/testing-library';
-
+import { Modal } from "../lib/Modal"
 
 
 export default {
@@ -20,10 +18,10 @@ export default {
             description: "display of the modal",
         },
         underlayerWidth: {
-            description: "height of underlayer",
+            description: "width of underlayer",
         },
         underlayerHeight: {
-            description: "width of underlayer",
+            description: "height of underlayer",
         },
         size: {
             description: "width size of dialog",
@@ -75,7 +73,7 @@ export default {
 export const Default = (args) => {
     return (
         <div style={{ height: "500px " }}>
-            <Modal {...args} underlayerHeight="470px"><p>message</p> </Modal>
+            <Modal {...args} underlayerHeight="470px" title="Message"><p style={{ textAlign: "center" }}>Press "Ok" to confirm your action</p> </Modal>
         </div >
 
     )
@@ -118,7 +116,3 @@ export const Form = (args) => (
 
 )
 
-/*
-Default.play = async () => {
-    await userEvent.click(screen.getByTestId("close_button"))
-}*/

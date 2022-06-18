@@ -1,5 +1,3 @@
-import "../src/stories/modal.css";
-
 export const parameters = {
   layout: "fullscreen",
   actions: { argTypesRegex: "^on[A-Z].*" },

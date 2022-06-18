@@ -1,6 +1,3 @@
-@import url("./modal.scss");
-
-
 .modal_underlayer{
     position: absolute;
     z-index: 100;
@@ -17,11 +14,6 @@
     padding: 0.5em;
 }
 
-.modal_header{
-    display: flex;
-    justify-content: space-between;
-    
-}
 
 .storybook_modal_title{
     margin: 0;

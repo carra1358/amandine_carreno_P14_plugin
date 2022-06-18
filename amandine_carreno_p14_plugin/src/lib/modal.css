@@ -1,0 +1,62 @@
+.modal_underlayer{
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal_container{
+    position: relative;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+
+.storybook_modal_title{
+    margin: 0;
+}
+
+
+
+.modal_close {
+    position: absolute;
+    top: 3px;
+    right: 0px;
+
+}
+
+.modal_footer{
+   text-align: end;
+}
+
+.modal_button_footer{
+   border: none;
+   border-radius: 5px;
+   padding: 0.8em;
+   
+}
+
+.modal_button_default{
+    margin: 0 0 0 1em;
+    
+}
+
+.L{
+    width: 90%;
+}
+
+.M{
+    width: 60%;
+}
+
+.S{
+    width: 30%;
+}
+
+
+
+
+

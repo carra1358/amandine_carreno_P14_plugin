@@ -1,5 +1,5 @@
-import { fireEvent, render, screen, userEvent } from '@testing-library/react';
-import Modal from './stories/Modal';
+import { fireEvent, render, screen } from '@testing-library/react';
+import Modal from './Modal';
 
 
 describe("Given I am a developper", () => {

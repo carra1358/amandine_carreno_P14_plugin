@@ -22,7 +22,10 @@ This is  an example for a simple usage of the Modal component.
 To show the Modal you have do use the propertie "isOpen" and set it to true and
 to remove the Modal you have to pass a callback to set "isOpen" at false. You can Embeded the node element of your choice as modal's content.
 ```
+// import Component
 import { Modal } from "amandine_carreno_p14_modal_lib"
+// import style
+import "amandine_carreno_p14_modal_lib/dist/index.css"
 
 function App() {
     // constent that handles the state of the modal
